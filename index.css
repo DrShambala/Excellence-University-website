@@ -46,7 +46,10 @@ body{
     font-size: 15px;
     text-decoration: none;
     color: black;
-
+}
+.material-symbols-outlined{
+    font-size: 30px;
+    display: none;
 }
 /* -----------------nav bar ---------------------- */
 .img1>span{
@@ -85,11 +88,13 @@ body{
 
 .description{
     width: 100%;
-    
+    display: grid;
+    align-items: center;
 }
 .description>p{
-   padding: 16px 140px;
+   padding: 15px 5%;
    text-align: center;
+   width: 90vw;
 }
 .box{
     width: 100%;
@@ -130,7 +135,7 @@ body{
     padding:15px;
     color: white;
     background-color: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     border-radius: 20px;
 }
 .card2{
@@ -141,7 +146,7 @@ body{
     text-align: center;
     color: white;
     background-color: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     padding:15px;
     border-radius: 20px;
 }
@@ -149,7 +154,7 @@ body{
     padding:15px;
     color: white;
     background-color: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     width: 20vw;
     text-align: center;
     position: absolute;
@@ -224,6 +229,7 @@ body{
 }
 .container4>img{
     width: 400px;
+    height: auto;
     border-radius: 50%;
 }
 .help{
@@ -235,7 +241,7 @@ body{
     background: orange;
     color: white;
     font-weight: bold;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 254, 255, 0.986);
     outline: 1px solid orange;
     cursor: pointer;
     margin: 20px 0;
@@ -243,5 +249,77 @@ body{
 .help>a{
     text-decoration: none;
     color: black;
+}
 
+/* ===================RESPONSIVENESS====================== */
+
+@media screen and (max-width: 480px){
+    .links,.account{
+        display: none;
+    }
+    .material-symbols-outlined{
+        display: block;
+    }
+    .container2>img{
+        display: none;
+    }
+    .container2{
+        display: grid;
+        margin: 20px 0;
+    }
+    .card1,.card2,.card3{
+        width: 250px;
+        height: auto;
+        /* display: none; */
+        position:static;
+        left: 0;
+        border: 1px solid black;
+        box-shadow: 0 0 30px rgb(201, 131, 0);
+    }
+    .card1>h4,.card1>p,.card1>a,
+    .card2>h4,.card2>p,.card2>a,
+    .card3>h4,.card3>p,.card3>a{
+        color: black;
+    }
+    .card1>a,.card2>a,.card3>a{
+        font-size: 15px;
+    }
+    .container3>.box>.boxes{
+        width: 300px;
+        height: auto;
+        padding: 20px 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(0, 255, 98);
+        margin: 10px;
+        color: white;
+        background-color: transparent;
+        backdrop-filter: blur(6px);
+    }
+    .container3>.box{
+        display: grid;
+    }
+    .container3>.box>.boxes>img{
+        border-radius: 15px;
+    }
+    .container3>.box>.boxes>a{
+        font-size: 15px;
+    }
+    #cont3{
+        background-image: url(harvard-university-campus.jpg);
+        background-size: cover;
+    }
+    #cont4{
+        background-image: url(HD-wallpaper-books-dark-shelf-library.jpg);
+        background-size: cover;
+    }
+    .container3>h2{
+        color: white;
+    }
+    .container4{
+        margin: 10px 0;
+    }
+    .container4>img{
+        width: 100px;
+        height: 100px;
+    }
 }
